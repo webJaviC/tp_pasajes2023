@@ -5,6 +5,7 @@ import java.util.Date;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Transient;
 
 
 @Entity
@@ -19,7 +20,11 @@ public class Vuelo {
 	
 	private String horaVuelo;
 	
-	@ManyToOne
+	
+	@Transient
+	private Boolean editando=false;
+	
+		@ManyToOne
 	private Avion avion;
 	
 	@ManyToOne
@@ -29,6 +34,22 @@ public class Vuelo {
 	private Ciudad destino;
 	
 	private String estado = "normal";
+
+	
+	public Boolean getEditando() {
+		return editando;
+	}
+
+
+	public void setEditando(Boolean editando) {
+		this.editando = editando;
+	}
+
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+
 
 	public String getEstado() {
 		return estado;
