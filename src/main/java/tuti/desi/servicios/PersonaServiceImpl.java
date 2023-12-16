@@ -21,7 +21,7 @@ public class PersonaServiceImpl implements PersonaService {
 	
 	@Autowired
 	IPersonaRepo repo;
-	
+
 	@Override
 	public List<Persona> getAll() {
 		
