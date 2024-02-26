@@ -17,19 +17,11 @@ public interface VueloService {
 
 	List<Vuelo> filter(VueloBuscarForm filter) throws Excepcion;
 
-	/**
-	 * Si la persona existe la actualizará, sino la creará en BD
-	 * @param persona
-	 * @throws Exception 
-	 */
+	
 	void save(Vuelo vuelo) throws Excepcion;
 
-	/**
-	 * permite obtener un vuelo determinado
-	 * @param idPersona identificador de la persona buscada
-	 * @return persona encontrada o null si no encontr{o la persona
-	 * @throws Exception ante un error
-	 */
+	
+	 
 	Vuelo getVueloById(Long idVuelo) throws Exception;
 
 	void deleteVueloByid(Long id);

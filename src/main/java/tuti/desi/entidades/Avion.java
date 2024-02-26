@@ -9,6 +9,8 @@ public class Avion {
 	@Id
 	private Long nroAvion;
 	
+	private String matricula;
+	
 	private String cantFilas;
 	
 	private String cantAsientos;
@@ -35,6 +37,14 @@ public class Avion {
 
 	public void setCantAsientos(String cantAsientos) {
 		this.cantAsientos = cantAsientos;
+	}
+
+	public String getMatricula() {
+		return matricula;
+	}
+
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
 	}
 
 

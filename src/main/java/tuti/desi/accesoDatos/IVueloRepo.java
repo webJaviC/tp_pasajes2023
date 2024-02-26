@@ -8,8 +8,9 @@ import org.springframework.data.jpa.repository.Query;
 import tuti.desi.entidades.*;
 
 public interface IVueloRepo extends JpaRepository<Vuelo, Long> {
-	List<Vuelo> findByNroOrTipo( String tipoVuelo, Long nroVuelo);
+    List<Vuelo> findByNroOrTipo(String tipoVuelo, Long nroVuelo);
 
-	@Query("SELECT p FROM Vuelo v WHERE v.tipoVuelo like ?1 or v.nroVuelo=?2")
-	List<Persona> findByNroVueloOrTipo(String tipoVuelo, Long nroVuelo);
+    @Query("SELECT v FROM Vuelo v WHERE v.tipoVuelo LIKE ?1 OR v.nroVuelo = ?2")
+    List<Vuelo> findByNroVueloOrTipo(String tipoVuelo, Long nroVuelo);
 }
+
